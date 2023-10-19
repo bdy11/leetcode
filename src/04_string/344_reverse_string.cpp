@@ -1,8 +1,7 @@
 /*
 solution:
-it is always not easy to figure out the loop limit, to use < or <=.
-in this specific example, use i < s.size() / 2.
-
+遍历的终止条件是 i < s.size() / 2;
+交换的元素是i 和 s.size() - i - 1
 */
 class Solution {
 public:
