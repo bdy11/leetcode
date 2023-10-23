@@ -5,18 +5,44 @@
 #include <unordered_set>
 #include <set>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
-int main() {
-    // output should be 11110101
-    uint8_t a = 0b01011111;
-    cout << a<< endl;;
-    uint8_t b = a;
-    b = b << 4;   // 0b11110000;
-    a = a >> 4;   // 0b00000101
-    cout << a <<endl;
-    a = a | b;
-    int c;
-    cout << a;
+string reverseWords(string s)
+{
+
+    // remove trailing space
+    int size = s.size();
+    while (size > 1)
+    {
+        if (s[size - 1] == ' ')
+            size--;
+        else
+            break;
+    }
+    s.resize(size);
+
+    reverse(s.begin(), s.end());
+    // remove trailing space
+    size = s.size();
+    while (size > 1)
+    {
+        if (s[size - 1] == ' ')
+            size--;
+        else
+            break;
+    }
+
+    s.resize(size);
+
+
+    return s;
+}
+int main()
+{
+    string s = " the sky is blue ";
+    string ans = reverseWords(s);
+    cout<< ans;
+
     return 0;
 }
