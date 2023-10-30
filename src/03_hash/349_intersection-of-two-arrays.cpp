@@ -1,5 +1,8 @@
 /*
-这道题
+这道题是典型的应用set的题。
+先把数组1推入set1, 然后判断数组2的元素在不在set1里，如果不在，就把该元素推入set2。
+使用unordered_set, 因为这种数据结构具有去重的特性。
+最后把set2装到vector里，作为返回值。
 */
 class Solution {
 public:
